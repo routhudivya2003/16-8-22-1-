@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int flag=0,i,j,n,a[50];
+	printf("enter he size of an array");
+	scanf("%d",&n);
+	printf("\n enter elements into an arrays");
+	for(i=0;i<n;i++)
+	{
+	    scanf("%d",&a[i]);
+	}
+    for(i=n-1;i>=0;i--)
+	{
+				flag=0;
+	for(j=2;j<a[i];j++)
+	{
+		if(a[i]!=0&&a[i]%j==0)
+		{
+			flag++;
+			break;
+		}
+	}
+		if(flag==0)
+		printf("%d\t",a[i]);
+    }
+		return 0;
+}
